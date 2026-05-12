@@ -11,7 +11,7 @@ from .model import Config, Integration
 
 # Don't forget to update also Dockerfile.dev when updating this.
 _DOCKERFILE_SYNTAX_SHA = (
-    "2780b5c3bab67f1f76c781860de469442999ed1a0d7992a5efdf2cffc0e3d769"  # 1.23.0
+    "d51d70e0501c11237a5dadb3591e298782e658019ce620a9a8ac65e4d755efb9"  # 1.9.114
 )
 
 _DOCKERFILE_SYNTAX_PATTERN = re.compile(r"# syntax=docker/dockerfile@sha256:[0-9a-f]+")
