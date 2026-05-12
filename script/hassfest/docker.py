@@ -11,7 +11,7 @@ from homeassistant.util import executor, thread
 
 # Don't forget to update also Dockerfile.dev when updating this.
 _DOCKERFILE_SYNTAX_SHA = (
-    "2780b5c3bab67f1f76c781860de469442999ed1a0d7992a5efdf2cffc0e3d769"  # 1.23.0
+    "1459f08690a67cd695607b73cf44b40db1e92b007f30e95bfdfe14c1865b0c90"  # 1.9.151
 )
 
 _DOCKERFILE_SYNTAX_PATTERN = re.compile(r"# syntax=docker/dockerfile@sha256:[0-9a-f]+")
