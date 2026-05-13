@@ -109,12 +109,10 @@ jobs:
       fail-fast: false
       matrix:
         abi: ["cp314"]
-        arch: ["amd64", "aarch64"]
+        arch: ["riscv64"]
         include:
-          - arch: amd64
-            os: ubuntu-26.04
-          - arch: aarch64
-            os: ubuntu-26.04-arm
+          - arch: riscv64
+            os: ubuntu-24.04-riscv
     steps:
       - name: Checkout the repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -160,12 +158,10 @@ jobs:
       fail-fast: false
       matrix:
         abi: ["cp314"]
-        arch: ["amd64", "aarch64"]
+        arch: ["riscv64"]
         include:
-          - arch: amd64
-            os: ubuntu-26.04
-          - arch: aarch64
-            os: ubuntu-26.04-arm
+          - arch: riscv64
+            os: ubuntu-24.04-riscv
     steps:
       - name: Checkout the repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
