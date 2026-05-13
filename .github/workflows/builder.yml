@@ -15,12 +15,10 @@ env:
   UV_SYSTEM_PYTHON: "true"
   # Base image version from https://github.com/home-assistant/docker
   # If python version changes in the base image, update .python-version accordingly to match the new Python version.
-  BASE_IMAGE_VERSION: "2026.10.3"
-  ARCHITECTURES: '["amd64", "aarch64"]'
+  BASE_IMAGE_VERSION: "2026.10.103"
+  ARCHITECTURES: '["riscv64"]'
   MACHINES: >-
-    ["generic-x86-64", "khadas-vim3", "odroid-c2", "odroid-c4", "odroid-m1",
-    "odroid-n2", "qemuarm-64", "qemux86-64", "raspberrypi3-64",
-    "raspberrypi4-64", "raspberrypi5-64", "yellow", "green"]
+    ["generic-riscv64"]
 
 permissions: {}
 
@@ -36,9 +34,10 @@ jobs:
     permissions:
       contents: read # To check out the repository
     outputs:
-      version: ${{ steps.version.outputs.version }}
-      channel: ${{ steps.version.outputs.channel }}
-      publish: ${{ steps.version.outputs.publish }}
+      version: 2026.11.103 # ${{ steps.version.outputs.version }}
+      stable: true         # ${{ steps.version.outputs.stable }}
+      channel: stable      # ${{ steps.version.outputs.channel }}
+      publish: false       # ${{ steps.version.outputs.publish }}
       architectures: ${{ env.ARCHITECTURES }}
       machines: ${{ env.MACHINES }}
       base_image_version: ${{ env.BASE_IMAGE_VERSION }}
@@ -102,10 +101,8 @@ jobs:
       matrix:
         arch: ${{ fromJson(needs.init.outputs.architectures) }}
         include:
-          - arch: amd64
-            os: ubuntu-26.04
-          - arch: aarch64
-            os: ubuntu-26.04-arm
+          - arch: riscv64
+            os: ubuntu-24.04-riscv
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v7.0.1
@@ -226,16 +223,9 @@ jobs:
       matrix:
         machine: ${{ fromJson(needs.init.outputs.machines) }}
         include:
-          # Default: aarch64 on native ARM runner
-          - arch: aarch64
-            runs-on: ubuntu-26.04-arm
-          # Overrides for amd64 machines
-          - machine: generic-x86-64
-            arch: amd64
-            runs-on: ubuntu-26.04
-          - machine: qemux86-64
-            arch: amd64
-            runs-on: ubuntu-26.04
+          # Default: riscv64 on native RISC-V runner
+          - arch: riscv64
+            runs-on: ubuntu-24.04-riscv
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v7.0.1
