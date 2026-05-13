@@ -42,6 +42,11 @@ OVERRIDDEN_REQUIREMENTS_ACTIONS = {
         "include": INCLUDED_REQUIREMENTS_WHEELS,
         "markers": {},
     },
+    "wheels_riscv64": {
+        "exclude": set(),
+        "include": INCLUDED_REQUIREMENTS_WHEELS,
+        "markers": {},
+    },
 }
 
 URL_PIN = (
