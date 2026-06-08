@@ -147,7 +147,7 @@ jobs:
           wheels-user: ${{ vars.WHEELS_USER }}
           wheels-index: ${{ vars.WHEELS_INDEX }}
           env-file: true
-          apk: "libffi-dev;openssl-dev;yaml-dev;nasm;zlib-ng-dev"
+          apk: "libffi-dev;openssl-dev;yaml-dev;nasm;zlib-ng-dev;tiff-dev;jpeg-dev;openjpeg-dev;zlib-dev;freetype-dev;lcms2-dev;libwebp-dev;tcl-dev;tk-dev;harfbuzz-dev;fribidi-dev;libimagequant-dev;libxcb-dev;libpng-dev"
           skip-binary: aiohttp;multidict;propcache;yarl;SQLAlchemy
           constraints: "homeassistant/package_constraints.txt"
           requirements-diff: "requirements_diff.txt"
