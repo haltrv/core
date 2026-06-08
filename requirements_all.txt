@@ -96,7 +96,7 @@ PyTransportNSW==0.1.1
 
 # homeassistant.components.camera
 # homeassistant.components.stream
-PyTurboJPEG==1.8.3
+PyTurboJPEG==2.2.0
 
 # homeassistant.components.vicare
 PyViCare==2.60.2
@@ -1688,7 +1688,7 @@ numato-gpio==0.13.0
 # homeassistant.components.iqvia
 # homeassistant.components.stream
 # homeassistant.components.trend
-numpy==2.3.2
+numpy==2.4.4
 
 # homeassistant.components.nyt_games
 nyt_games==0.5.0
@@ -3209,7 +3209,7 @@ uasiren==0.0.1
 uhooapi==1.2.8
 
 # homeassistant.components.unifiprotect
-uiprotect==15.3.0
+uiprotect==10.6.0
 
 # homeassistant.components.landisgyr_heat_meter
 ultraheat-api==0.6.1
