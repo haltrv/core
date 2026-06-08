@@ -1,0 +1,1 @@
+curl_cffi @ git+https://github.com/eshattow/lexiforest-curl_cffi@next

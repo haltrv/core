@@ -96,7 +96,7 @@ PyTransportNSW==0.1.1
 
 # homeassistant.components.camera
 # homeassistant.components.stream
-PyTurboJPEG==1.8.3
+PyTurboJPEG==2.6.1
 
 # homeassistant.components.vicare
 PyViCare==2.66.0
@@ -660,7 +660,7 @@ autoskope_client==1.4.1
 
 # homeassistant.components.generic
 # homeassistant.components.stream
-av==19.0.0
+av==19.0.2
 
 # homeassistant.components.avea
 avea==1.8.0
@@ -1820,7 +1820,7 @@ numato-gpio==0.13.0
 # homeassistant.components.iqvia
 # homeassistant.components.stream
 # homeassistant.components.trend
-numpy==2.3.2
+numpy==2.5.5
 
 # homeassistant.components.nyt_games
 nyt_games==1.0.1
@@ -2387,7 +2387,7 @@ pyintesishome==2.5.0
 pyipma==3.0.10
 
 # homeassistant.components.iqvia
-pyiqvia==2022.04.0
+pyiqvia==2023.12.0
 
 # homeassistant.components.irish_rail_transport
 pyirishrail==0.0.2
