@@ -1164,12 +1164,6 @@ gpiozero==1.6.2
 # homeassistant.components.gpsd
 gps3==0.33.3
 
-# homeassistant.components.gree
-greeclimate==2.1.4
-
-# homeassistant.components.greencell
-greencell_client==1.0.3
-
 # homeassistant.components.greeneye_monitor
 greeneye_monitor==3.0.3
 
