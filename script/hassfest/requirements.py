@@ -77,9 +77,6 @@ PACKAGE_CHECK_VERSION_RANGE_EXCEPTIONS: dict[str, dict[str, set[str]]] = {
         "pysmarty2": {"pymodbus"}
     },
     "telegram_bot": {"python-telegram-bot": {"httpx"}},
-    "xiaomi_miio": {
-        "python-miio": {"zeroconf"},
-    },
 }
 
 # Constraints use an impossible version to prohibit a package altogether.
