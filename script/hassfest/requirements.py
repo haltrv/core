@@ -78,9 +78,6 @@ PACKAGE_CHECK_VERSION_RANGE_EXCEPTIONS: dict[str, dict[str, set[str]]] = {
         "pystiebeleltron": {"pymodbus"}
     },
     "telegram_bot": {"python-telegram-bot": {"httpx"}},
-    "xiaomi_miio": {
-        "python-miio": {"zeroconf"},
-    },
 }
 
 PACKAGE_REGEX = re.compile(
