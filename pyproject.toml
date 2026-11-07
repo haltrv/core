@@ -18,10 +18,10 @@ classifiers = [
   "Intended Audience :: End Users/Desktop",
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
   "Topic :: Home Automation",
 ]
-requires-python = ">=3.14.2"
+requires-python = ">=3.15.2"
 dependencies = [
   "aiodns==4.0.4",
   # aiogithubapi is needed by frontend; frontend is unconditionally imported at
@@ -106,7 +106,7 @@ include-package-data = true
 include = ["homeassistant*"]
 
 [tool.pylint.MAIN]
-py-version = "3.14"
+py-version = "3.15"
 # Use a conservative default here; 2 should speed up most setups and not hurt
 # any too bad. Override on command line as appropriate.
 jobs = 2
@@ -593,6 +593,8 @@ filterwarnings = [
   "ignore:Inheritance class AiohttpClientSession from ClientSession is discouraged:DeprecationWarning:google.genai._api_client",
   "ignore:'_UnionGenericAlias' is deprecated and slated for removal in Python 3.17:DeprecationWarning:google.genai.types",
 
+  # -- New in Python 3.15
+
   # -- Websockets 14.1
   # https://websockets.readthedocs.io/en/stable/howto/upgrade.html
   "ignore:websockets.legacy is deprecated:DeprecationWarning:websockets.legacy",
@@ -876,7 +878,7 @@ mark-parentheses = false
 "homeassistant.helpers.config_validation.port".msg = "use probatio.Port() instead"
 "homeassistant.helpers.config_validation.has_at_least_one_key".msg = "use probatio.AtLeastOne instead"
 "homeassistant.helpers.config_validation.has_at_most_one_key".msg = "use probatio.AtMostOne instead"
-"__future__.annotations".msg = "It should not be needed because Home Assistant requires Python 3.14+"
+"__future__.annotations".msg = "It should not be needed because Home Assistant requires Python 3.15+"
 
 [tool.ruff.lint.isort]
 force-sort-within-sections = true
