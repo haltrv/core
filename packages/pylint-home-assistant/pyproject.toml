@@ -18,10 +18,10 @@ classifiers = [
   "Environment :: Plugins",
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
   "Topic :: Software Development :: Quality Assurance",
 ]
-requires-python = ">=3.14.0"
+requires-python = ">=3.15.0"
 dependencies = [
   "astroid>=4.0",
   "orjson",
