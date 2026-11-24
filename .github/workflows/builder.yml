@@ -205,7 +205,7 @@ jobs:
           echo "${GITHUB_SHA};${GITHUB_REF};${GITHUB_EVENT_NAME};${GITHUB_ACTOR}" > rootfs/OFFICIAL_IMAGE
 
       - name: Build base image
-        uses: home-assistant/builder/actions/build-image@2026.09.0
+        uses: haltrv/builder/actions/build-image@2026.9.100
         with:
           arch: ${{ matrix.arch }}
           build-args: |
@@ -263,7 +263,7 @@ jobs:
           fi
 
       - name: Build machine image
-        uses: home-assistant/builder/actions/build-image@2026.09.0
+        uses: haltrv/builder/actions/build-image@2026.9.100
         with:
           arch: ${{ matrix.arch }}
           build-args: |
